@@ -6,12 +6,13 @@ import React, {Component} from "react";
 // import WrapperMainFooter from "./components/wrappers/WrapperMainFooter";
 // import WrapperPagesHeader from "./components/wrappers/WrapperPagesHeader";
 // import WrapperPagesFooter from "./components/wrappers/WrapperPagesFooter";
+// import FooterPages from "./components/footers/FooterPages";
 
 class App extends Component {
   render() {
     return (
       <>
-        <LogoFooterPages/>
+
       </>
     );
   }
