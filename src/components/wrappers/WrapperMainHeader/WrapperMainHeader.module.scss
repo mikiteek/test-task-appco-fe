@@ -1,6 +1,8 @@
 @import "../wrappers.variables";
 
 .wrapper {
+  padding-top: 24px;
+  margin-bottom: 16px;
   background-image: url("../../../static/images/header-main/header-main-bg@1x.png");
   height: 655px;
   @extend %wrapper-background;

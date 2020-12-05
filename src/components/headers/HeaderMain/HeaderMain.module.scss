@@ -1,0 +1,45 @@
+@import "../../../static/scss/mixins";
+@import "../../../static/scss/variables";
+
+.contentBlock {
+  display: flex;
+}
+.sectionBrain {
+  width: 586px;
+  margin-top: 48px;
+  margin-right: auto;
+}
+
+.brainSectionTitle {
+  @include my-font-styles(#fff, 1.2, 48px, 400);
+  margin-bottom: 24px;
+}
+
+.brainSectionTitleSpan {
+  @include my-font-styles(#fff, 1.2, 48px, 700);
+}
+
+.brainSectionDescription {
+  @include my-font-styles(#fff, 1.42, 20px, 400);
+  margin-bottom: 32px;
+}
+
+.viewStats {
+  @include my-font-styles(#3a80ba, 1.42, 20px, 400);
+  @extend %flex-center-center;
+  width: 154px;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: none;
+}
+
+.mobileBlock {
+  height: 558px;
+  width: 280px;
+  margin-right: 102px;
+  background-image: url("../../../static/images/header-main/mobile-image@1x.png");
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../../../static/images/header-main/mobile-image@2x.png");
+  }
+}
