@@ -1,0 +1,35 @@
+@import "../../static/scss/mixins";
+@import "../../static/scss/variables";
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  width: 579px;
+}
+
+.formInput {
+  padding-left: 20px;
+  height: 64px;
+  width: 579px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  @extend %flex-center-center;
+}
+
+.formInput::placeholder {
+  @include my-font-styles(#b9b9b9, 1.62, 16px, 400);
+}
+
+.formButton {
+  @include my-font-styles(#fff, 1.42, 16px, 400);
+  @extend %flex-center-center;
+  width: 176px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #3a80ba;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}

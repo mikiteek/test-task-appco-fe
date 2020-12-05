@@ -1,0 +1,12 @@
+@import "../../../static/scss/mixins";
+
+.copyright {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyrightItem {
+  @include my-font-styles(#fff, 1.2, 16px, 400);
+}
