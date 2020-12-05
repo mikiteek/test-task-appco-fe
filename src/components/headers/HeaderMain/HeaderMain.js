@@ -1,7 +1,9 @@
 import React, {Component} from "react";
+import {NavLink} from "react-router-dom";
 import WrapperMainHeader from "../../wrappers/WrapperMainHeader";
 import LogoHeader from "../../logos/LogoHeader";
 import styles from "./HeaderMain.module.scss";
+import routes from "../../../routes";
 
 class HeaderMain extends Component {
   render() {
@@ -19,7 +21,10 @@ class HeaderMain extends Component {
                 Our design projects are fresh and simple and will benefit your business greatly.
                 Learn more about our work!
               </p>
-              <button className={styles.viewStats} type="button">View stats</button>
+              <NavLink
+                className={styles.viewStats}
+                to={routes.users}
+              >View stats</NavLink>
             </section>
             <div className={styles.mobileBlock}></div>
           </div>
