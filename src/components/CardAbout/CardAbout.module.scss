@@ -1,0 +1,28 @@
+@import "../../static/scss/mixins";
+
+.card {
+  border-radius: 32px;
+  height: 323px;
+  width: 380px;
+  padding: 48px 15px 0 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+.card:not(:last-child) {
+  margin-right: 20px;
+}
+
+.cardIcon {
+  margin: 0 auto 40px auto;
+}
+
+.cardTitle {
+  margin-bottom: 16px;
+  @include my-font-styles(#1a1a1a, 1.2, 24px, 600);
+}
+
+.cardDescription {
+  width: 316px;
+  margin: auto;
+  @include my-font-styles(#1a1a1a, 1.42, 16px, 400);
+}
