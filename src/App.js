@@ -12,17 +12,12 @@ import React, {Component} from "react";
 // import HeaderPages from "./components/headers/HeaderPages";
 // import HeaderMain from "./components/headers/HeaderMain";
 // import CardAbout from "./components/CardAbout";
-// import iconDesign from "./static/images/icons/card-design.svg";
+// import SectionAbout from "./components/SectionAbout";
 
 class App extends Component {
   render() {
     return (
       <>
-        {/*<CardAbout*/}
-        {/*  icon={iconDesign}*/}
-        {/*  title={"Clean Design"}*/}
-        {/*  description={"Increase sales by showing true dynamics of your website."}*/}
-        {/*/>*/}
       </>
     );
   }
