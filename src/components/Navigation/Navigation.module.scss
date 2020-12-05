@@ -1,0 +1,29 @@
+@import "../../static/scss/mixins";
+
+.nav {
+  margin-bottom: 24px;
+}
+
+.navList {
+  display: flex;
+}
+
+.liItem:not(:last-child) {
+  margin-right: 8px;
+}
+
+.liItemLink {
+  @include my-font-styles(#ccc, 1.2, 16px, 400);
+}
+
+.liItemLink::after {
+  content: "  >";
+  display: inline-block;
+}
+
+.liItemLinkActive {
+  color: #3a80ba;
+}
+.liItemLinkActive::after {
+  content: "";
+}

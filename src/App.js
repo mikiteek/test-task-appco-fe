@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Route, Switch} from "react-router-dom";
 // import LogoHeader from "./components/logos/LogoHeader";
 // import LogoFooterMain from "./components/logos/LogoFooterMain";
 // import LogoFooterPages from "./components/logos/LogoFooterPages";
@@ -14,11 +15,20 @@ import React, {Component} from "react";
 // import CardAbout from "./components/CardAbout";
 // import SectionAbout from "./components/SectionAbout";
 // import MainPage from "./views/MainPage";
+import MainPage from "./views/MainPage";
+import UsersStatisticsPage from "./views/UsersStatisticsPage";
+import SelectedUserPage from "./views/SelectedUserPage";
+import routes from "./routes";
 
 class App extends Component {
   render() {
     return (
       <>
+        <Switch>
+          <Route path={routes.main} exact component={MainPage}/>
+          <Route path={routes.users} exact component={UsersStatisticsPage}/>
+          <Route path={routes.selectedUser} component={SelectedUserPage}/>
+        </Switch>
       </>
     );
   }
