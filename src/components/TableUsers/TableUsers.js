@@ -1,13 +1,17 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
+import {withRouter} from "react-router";
 import usersSelector from "../../redux/users/usersSelector";
 import usersOperations from "../../redux/users/usersOperations";
 import styles from "./TableUsers.module.scss";
 
 class TableUsers extends Component {
-
   componentDidMount() {
     this.props.onGetUsers(1, 25);
+  }
+
+  handleClickByRow(id) {
+    this.props.history.push(`/users/${id}`);
   }
 
   render() {
@@ -29,9 +33,9 @@ class TableUsers extends Component {
               <th>Total page views</th>
             </tr>
             </thead>
+            <tbody>
             {docs && docs.map(({id, first_name, last_name, email, gender, ip_address, statistic}) => (
-              <tbody key={id}>
-              <tr>
+              <tr key={id} className={styles.userRow} onClick={() => this.handleClickByRow(id)}>
                 <td>{id}</td>
                 <td>{first_name}</td>
                 <td>{last_name}</td>
@@ -41,8 +45,8 @@ class TableUsers extends Component {
                 <td>{statistic[0].total_clicks}</td>
                 <td>{statistic[0].total_page_views}</td>
               </tr>
-              </tbody>
             ))}
+            </tbody>
           </table>
         }
       </div>
@@ -58,4 +62,4 @@ const mapDispatchToProps = {
   onGetUsers: usersOperations.getUsers,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TableUsers);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(TableUsers));
