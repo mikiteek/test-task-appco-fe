@@ -1,0 +1,10 @@
+@import "../wrappers.variables";
+
+.wrapper {
+  background-image: url("../../../static/images/footer-main/footer-main-bg@1x.png");
+  height: 184px;
+  @extend %wrapper-background;
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../../../static/images/footer-main/footer-main-bg@2x.png");
+  }
+}
