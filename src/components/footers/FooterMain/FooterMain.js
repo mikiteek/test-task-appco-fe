@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import WrapperMainFooter from "../../wrappers/WrapperMainFooter";
 import LogoFooterMain from "../../logos/LogoFooterMain";
 import FooterContent from "../FooterContent";
-import FormSubscribe from "../../FormSubscribe";
+import FormSubscribe from "../FormSubscribe";
 import styles from "./FooterMain.module.scss";
 
 class FooterMain extends Component {

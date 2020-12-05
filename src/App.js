@@ -9,6 +9,8 @@ import React, {Component} from "react";
 // import FooterPages from "./components/footers/FooterPages";
 // import FormSubscribe from "./components/FormSubscribe";
 // import FooterMain from "./components/footers/FooterMain/FooterMain";
+// import HeaderPages from "./components/headers/HeaderPages";
+// import HeaderMain from "./components/headers/HeaderMain";
 
 class App extends Component {
   render() {
