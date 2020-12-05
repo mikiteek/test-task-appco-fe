@@ -7,5 +7,5 @@ const getUsersError = createAction("users/getError");
 export default {
   getUsersRequest,
   getUsersSuccess,
-  getUsersError
-}
+  getUsersError,
+};

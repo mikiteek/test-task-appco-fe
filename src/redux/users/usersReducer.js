@@ -2,7 +2,7 @@ import {combineReducers} from "redux";
 import {createReducer} from "@reduxjs/toolkit";
 import usersActions from "./usersActions";
 
-const items = createReducer([], {
+const items = createReducer({}, {
   [usersActions.getUsersSuccess]: (state, action) => action.payload,
 });
 

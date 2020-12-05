@@ -14,4 +14,4 @@ const getUsers = (page= 1, paginate= 25) => dispatch => {
 
 export default {
   getUsers,
-}
+};
