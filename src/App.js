@@ -13,6 +13,7 @@ import React, {Component} from "react";
 // import HeaderMain from "./components/headers/HeaderMain";
 // import CardAbout from "./components/CardAbout";
 // import SectionAbout from "./components/SectionAbout";
+// import MainPage from "./views/MainPage";
 
 class App extends Component {
   render() {
