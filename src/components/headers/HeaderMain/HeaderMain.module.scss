@@ -16,7 +16,7 @@
 }
 
 .brainSectionTitleSpan {
-  @include my-font-styles(#fff, 1.2, 48px, 700);
+  font-weight: 700;
 }
 
 .brainSectionDescription {
