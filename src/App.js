@@ -4,7 +4,6 @@ import MainPage from "./views/MainPage";
 import UsersStatisticsPage from "./views/UsersStatisticsPage";
 import SelectedUserPage from "./views/SelectedUserPage";
 import routes from "./routes";
-import Spinner from "./components/Spinner/Spinner";
 
 class App extends Component {
   render() {
