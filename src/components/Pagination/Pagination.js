@@ -4,6 +4,7 @@ import PaginationJs from "react-js-pagination";
 import usersOperations from "../../redux/users/usersOperations";
 import styles from "./Pagination.module.scss";
 import usersSelector from "../../redux/users/usersSelector";
+import usersActions from "../../redux/users/usersActions";
 
 class Pagination extends Component {
   state = {
@@ -50,6 +51,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   onGetUsers: usersOperations.getUsers,
+  onVisibleSpinner: usersActions.visibleSpinner,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pagination);

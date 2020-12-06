@@ -9,7 +9,7 @@ const getUsers = (page= 1, paginate= 25) => dispatch => {
   axios
     .get(`/users?page=${page}&paginate=${paginate}`)
     .then(({data}) => dispatch(usersActions.getUsersSuccess(data)))
-    .catch(error => dispatch(usersActions.getUsersError(error)));
+    .catch(error => dispatch(usersActions.getUsersError(error)))
 }
 
 const getStatistics = (id) => dispatch => {
