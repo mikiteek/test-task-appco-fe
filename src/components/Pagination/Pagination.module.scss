@@ -3,6 +3,8 @@
 
 .listItems {
   display: flex;
+  width: 500px;
+  margin: auto;
 }
 .listItems li {
   @extend %flex-center-center;
