@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import HeaderPages from "../../components/headers/HeaderPages";
 import FooterPages from "../../components/footers/FooterPages";
 import Navigation from "../../components/Navigation";
+import TableUsers from "../../components/TableUsers";
 
 class UsersStatisticsPage extends Component {
   render() {
@@ -10,9 +11,7 @@ class UsersStatisticsPage extends Component {
         <HeaderPages/>
         <Navigation/>
         <main className="container">
-          <div>
-            This is USERS STATISTICS page
-          </div>
+          <TableUsers/>
         </main>
         <FooterPages/>
       </>

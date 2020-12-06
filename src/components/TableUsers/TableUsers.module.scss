@@ -1,0 +1,47 @@
+@import "../../static/scss/mixins";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableTitle {
+  @include my-font-styles(#1a1a1a, 1.2, 32px, 700);
+  margin-bottom: 16px;
+}
+
+.rowHead {
+  height: 48px;
+  background-color: #3a80ba;
+  @include my-font-styles(#fff, 1.2, 16px, 400);
+}
+
+.colHeadId {
+  width: 64px;
+}
+
+th, td {
+  border: 1px solid #fff;
+}
+td {
+  padding-left: 20px;
+  height: 32px;
+  @include my-font-styles(#000, 1.2, 16px, 400);
+}
+
+.tableBody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+.tableBody tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+
+.userRow {
+  cursor: pointer;
+}
+
+.tableBlock {
+  margin-bottom: 24px;
+}

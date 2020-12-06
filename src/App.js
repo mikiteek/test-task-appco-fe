@@ -23,13 +23,11 @@ import routes from "./routes";
 class App extends Component {
   render() {
     return (
-      <>
-        <Switch>
-          <Route path={routes.main} exact component={MainPage}/>
-          <Route path={routes.users} exact component={UsersStatisticsPage}/>
-          <Route path={routes.selectedUser} component={SelectedUserPage}/>
-        </Switch>
-      </>
+      <Switch>
+        <Route path={routes.main} exact component={MainPage}/>
+        <Route path={routes.users} exact component={UsersStatisticsPage}/>
+        <Route path={routes.selectedUser} component={SelectedUserPage}/>
+      </Switch>
     );
   }
 }
