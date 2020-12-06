@@ -12,6 +12,16 @@ const getUsers = (page= 1, paginate= 25) => dispatch => {
     .catch(error => dispatch(usersActions.getUsersError(error)));
 }
 
+const getStatistics = (id) => dispatch => {
+  dispatch(usersActions.getStatisticUserRequest());
+
+  axios
+    .get(`/statistics/${id}`)
+    .then(({data}) => dispatch(usersActions.getStatisticUserSuccess(data)))
+    .catch(error => dispatch(usersActions.getStatisticUserError(error)))
+}
+
 export default {
   getUsers,
+  getStatistics,
 };

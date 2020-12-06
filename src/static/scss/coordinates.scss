@@ -1,0 +1,5 @@
+@import "./mixins";
+
+.rv-xy-plot__axis__tick, rv-xy-plot__axis__tick__text {
+  @include my-font-styles(#ccc, 1.42, 16px, 400);
+}

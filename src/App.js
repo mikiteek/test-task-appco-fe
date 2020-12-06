@@ -20,6 +20,7 @@ import UsersStatisticsPage from "./views/UsersStatisticsPage";
 import SelectedUserPage from "./views/SelectedUserPage";
 // import Pagination from "./components/Pagination";
 import routes from "./routes";
+// import Diagram from "./components/Diagram";
 
 class App extends Component {
   render() {

@@ -1,11 +1,15 @@
 import React, {Component} from "react";
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
+import usersSelector from "../../redux/users/usersSelector";
 import routes from "../../routes";
 import styles from "./Navigation.module.scss";
 
 class Navigation extends Component {
   render() {
+    const {user} = this.props;
     const navStyles = [styles.nav, "container"].join(" ");
+    const userInfoStyles = [styles.liItemLink, "js-user"].join(" ");
     return (
       <nav className={navStyles}>
         <ul className={styles.navList}>
@@ -29,19 +33,23 @@ class Navigation extends Component {
               Users statistics
             </NavLink>
           </li>
-          <li className={styles.liItem}>
+          {Object.keys(user).length !== 0 && <li className={styles.liItem}>
             <NavLink
               to={routes.selectedUser}
-              className={styles.liItemLink}
+              className={userInfoStyles}
               activeClassName={styles.liItemLinkActive}
             >
-              {"Selected user from redux"}
+              {user.firstName + " " + user.lastName}
             </NavLink>
-          </li>
+          </li>}
         </ul>
       </nav>
     );
   }
 }
 
-export default Navigation;
+const mapStateToProps = state => ({
+  user: usersSelector.getUserInfo(state)
+});
+
+export default connect(mapStateToProps)(Navigation)
