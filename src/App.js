@@ -18,6 +18,7 @@ import {Route, Switch} from "react-router-dom";
 import MainPage from "./views/MainPage";
 import UsersStatisticsPage from "./views/UsersStatisticsPage";
 import SelectedUserPage from "./views/SelectedUserPage";
+// import Pagination from "./components/Pagination";
 import routes from "./routes";
 
 class App extends Component {

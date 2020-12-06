@@ -49,3 +49,11 @@ input[type="radio"].visually-hidden {
     width: 1180px;
   }
 }
+
+.next, .previous {
+  border: none;
+}
+
+.activePrevNext {
+  color: #3a80ba;
+}
