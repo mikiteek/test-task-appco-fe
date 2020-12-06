@@ -19,8 +19,10 @@ class TableUsers extends Component {
     const refLastName = parent.querySelector(".js-last-name");
     this.props.onToggleUser({
       firstName: refFirstName.textContent,
-      lastName: refLastName.textContent
+      lastName: refLastName.textContent,
+      user_id: refId.textContent,
     });
+    this.props.onGetUserStatistic(refId.textContent);
     this.props.history.push(`/users/${refId.textContent}`);
   }
 
@@ -70,6 +72,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   onGetUsers: usersOperations.getUsers,
   onToggleUser: usersActions.toggleUserInfo,
+  onGetUserStatistic: usersOperations.getStatistics,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(TableUsers));

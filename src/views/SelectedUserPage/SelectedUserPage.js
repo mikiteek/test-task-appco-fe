@@ -2,10 +2,17 @@ import React, {Component} from "react";
 import HeaderPages from "../../components/headers/HeaderPages";
 import FooterPages from "../../components/footers/FooterPages";
 import Navigation from "../../components/Navigation";
+import Diagram from "../../components/Diagram";
 import {connect} from "react-redux";
 import usersActions from "../../redux/users/usersActions";
+import navStyles from "../../components/Navigation/Navigation.module.scss";
 
 class SelectedUserPage extends Component {
+  componentDidMount() {
+    const linkRef = document.querySelector(".js-user");
+    linkRef.classList.add(navStyles.liItemLinkActive)
+  }
+
   componentWillUnmount() {
     this.props.onToggleUser({})
   }
@@ -16,9 +23,7 @@ class SelectedUserPage extends Component {
         <HeaderPages/>
         <Navigation/>
         <main className="container">
-          <div>
-            This is SELECTED USER page
-          </div>
+          <Diagram/>
         </main>
         <FooterPages/>
       </>

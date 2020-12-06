@@ -9,7 +9,7 @@ class Navigation extends Component {
   render() {
     const {user} = this.props;
     const navStyles = [styles.nav, "container"].join(" ");
-    const userInfoStyles = [styles.liItemLink, "js-user"];
+    const userInfoStyles = [styles.liItemLink, "js-user"].join(" ");
     return (
       <nav className={navStyles}>
         <ul className={styles.navList}>

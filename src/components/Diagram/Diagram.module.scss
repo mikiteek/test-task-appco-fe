@@ -1,0 +1,15 @@
+@import "../../static/scss/mixins";
+
+.userName {
+  @include my-font-styles(#1a1a1a, 1.2, 32px, 700);
+  margin-bottom: 24px;
+}
+
+.graphTitle {
+  @include my-font-styles(#1a1a1a, 1.2, 24px, 700);
+  margin-bottom: 22px;
+}
+
+.graphBlock {
+  margin-bottom: 48px;
+}

@@ -26,7 +26,7 @@ class Pagination extends Component {
           hideFirstLastPages
           activePage={this.state.activePage}
           itemsCountPerPage={this.state.countPerPage}
-          totalItemsCount={total}
+          totalItemsCount={total | 125}
           pageRangeDisplayed={5}
           onChange={this.handlePageChange.bind(this)}
           itemClass={styles.item}
