@@ -10,6 +10,8 @@ const getStatisticUserError = createAction("statistic/getStatisticError");
 
 const toggleUserInfo = createAction("user/toggleUserInfo");
 
+const visibleSpinner = createAction("spinner/visible");
+
 export default {
   getUsersRequest,
   getUsersSuccess,
@@ -18,4 +20,5 @@ export default {
   getStatisticUserSuccess,
   getStatisticUserError,
   toggleUserInfo,
+  visibleSpinner,
 };
