@@ -6,6 +6,7 @@ import Diagram from "../../components/Diagram";
 import Spinner from "../../components/Spinner/Spinner";
 import {connect} from "react-redux";
 import usersActions from "../../redux/users/usersActions";
+import usersSelector from "../../redux/users/usersSelector";
 import navStyles from "../../components/Navigation/Navigation.module.scss";
 import styles from "./SelectedUserPage.scss";
 
@@ -26,7 +27,7 @@ class SelectedUserPage extends Component {
         <HeaderPages/>
         <Navigation/>
         <main className={mainStyles}>
-          <Spinner/>
+          {this.props.spinner && <Spinner/>}
           <Diagram/>
         </main>
         <FooterPages/>
@@ -35,8 +36,12 @@ class SelectedUserPage extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  spinner: usersSelector.getSpinner(state),
+});
+
 const mapDispatchToProps = {
   onToggleUser: usersActions.toggleUserInfo,
 }
 
-export default connect(null, mapDispatchToProps)(SelectedUserPage);
+export default connect(mapStateToProps, mapDispatchToProps)(SelectedUserPage);

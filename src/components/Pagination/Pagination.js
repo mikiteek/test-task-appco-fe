@@ -2,9 +2,9 @@ import React, {Component} from "react"
 import {connect} from "react-redux";
 import PaginationJs from "react-js-pagination";
 import usersOperations from "../../redux/users/usersOperations";
-import styles from "./Pagination.module.scss";
 import usersSelector from "../../redux/users/usersSelector";
 import usersActions from "../../redux/users/usersActions";
+import styles from "./Pagination.module.scss";
 
 class Pagination extends Component {
   state = {

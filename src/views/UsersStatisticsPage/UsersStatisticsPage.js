@@ -1,10 +1,12 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
 import HeaderPages from "../../components/headers/HeaderPages";
 import FooterPages from "../../components/footers/FooterPages";
 import Navigation from "../../components/Navigation";
 import TableUsers from "../../components/TableUsers";
 import Pagination from "../../components/Pagination";
 import Spinner from "../../components/Spinner/Spinner";
+import usersSelector from "../../redux/users/usersSelector";
 import styles from "./UsersStatisticsPage.module.scss";
 
 class UsersStatisticsPage extends Component {
@@ -15,7 +17,7 @@ class UsersStatisticsPage extends Component {
         <HeaderPages/>
         <Navigation/>
         <main className={mainStyles}>
-          <Spinner/>
+          {this.props.spinner && <Spinner/>}
           <TableUsers/>
           <Pagination/>
         </main>
@@ -25,4 +27,8 @@ class UsersStatisticsPage extends Component {
   }
 }
 
-export default UsersStatisticsPage;
+const mapStateToProps = state => ({
+  spinner: usersSelector.getSpinner(state),
+});
+
+export default connect(mapStateToProps)(UsersStatisticsPage);
