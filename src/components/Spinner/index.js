@@ -1,1 +1,1 @@
-export {default} from "./Spinner.module.scss";
+export {default} from "./Spinner";
