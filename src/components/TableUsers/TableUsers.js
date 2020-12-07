@@ -54,8 +54,8 @@ class TableUsers extends Component {
               <td>{email}</td>
               <td>{gender}</td>
               <td>{ip_address}</td>
-              <td>{statistic[0].total_clicks}</td>
-              <td>{statistic[0].total_page_views}</td>
+              <td>{statistic.total_clicks}</td>
+              <td>{statistic.total_page_views}</td>
             </tr>
           ))}
           </tbody>
